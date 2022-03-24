@@ -21,11 +21,12 @@ export class NewsItems extends Component {
                 <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
                   {!title?'Title not found':title}...
                 </p>
-                <p className="text-gray-400 dark:text-gray-500 text-md h-auto sm:h-auto md:h-22 lg:h-12">
+                <p className="text-gray-400 dark:text-gray-500 text-md h-auto sm:h-auto md:h-22 lg:h-18">
                   {!desc?'Description not found':desc}...
                 </p>
                 <p className="text-gray-400 dark:text-gray-500 text-md mt-3">
-                <span className="text-black font-semibold capitalize">published :</span> {!publishedAt?'publisher Not found':publishedAt}
+                {/* <span className="text-black font-semibold capitalize">published :</span> {!publishedAt?'publisher Not found':publishedAt} */}
+                <span className="text-black font-semibold capitalize">published :</span> {new Date(publishedAt).toGMTString()}
                 </p>
                 <p className="text-gray-400 dark:text-gray-500 text-md mt-3">
                 <span className="text-black font-semibold capitalize">author :</span> {!author?'Not found':author}
