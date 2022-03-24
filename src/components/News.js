@@ -26,7 +26,7 @@ export class News extends Component {
     this.state = {
       articles : [],
       // articles: this.articles,
-      loading: false,
+      loading: true,
       page: 1,
       totalResults:0,
     };
@@ -114,7 +114,7 @@ export class News extends Component {
     this.setState({ 
       articles: this.state.articles.concat(parsedData.articles),
       totalResults: parsedData.totalResults,
-      loading: true,
+      loading: false,
      });
   };
 
@@ -133,6 +133,7 @@ export class News extends Component {
           loader={<Spinner/>}
         >
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {/* {!this.state.loading && this.state.articles.map((element) => { */}
             {this.state.articles.map((element) => {
               return (
                 <NewsItems

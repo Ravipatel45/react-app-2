@@ -8,7 +8,7 @@ export class Navbar extends Component {
   render() {
     return (
       <>
-        <nav className="bg-gray-800">
+        <nav className="bg-gray-800 sticky top-0 z-10">
           <div className="container mx-auto">
             <div className="relative flex items-center justify-between h-16">
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
