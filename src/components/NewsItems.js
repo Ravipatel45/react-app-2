@@ -10,7 +10,7 @@ export class NewsItems extends Component {
 
     return (
           <div className="overflow-hidden shadow-lg rounded-lg h-90 w-full cursor-pointer m-auto">
-            <a rel="noopener" href={pageLink} target="_blank" className="w-full block h-full">
+            <a href={pageLink} target="_blank" rel="noopener" className="w-full block h-full">
               <img
                 alt="Dummyimg"
                 src={!imgUrl?"http://via.placeholder.com/640x360":imgUrl}
